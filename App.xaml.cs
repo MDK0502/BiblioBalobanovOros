@@ -13,5 +13,11 @@ namespace BiblioBalobanovOros
     /// </summary>
     public partial class App : Application
     {
+        public static string ConnectionBD()
+        {
+            string connectionString = ConfigurationManager.
+                ConnectionStrings["ConnectionDB"].ConnectionString;
+            return connectionString;
+        }
     }
 }
