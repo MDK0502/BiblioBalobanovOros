@@ -1,0 +1,64 @@
+﻿<Window x:Class="BiblioBalobanovOros.WindowFolder.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:BiblioBalobanovOros.WindowFolder"
+        mc:Ignorable="d"
+        Height="440" Width="400"
+        MaxHeight="440" MaxWidth="400"
+        MinHeight="440" MinWidth="400"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip">
+    <Border Style="{DynamicResource MainBorder}"
+            MouseDown="Border_MouseDown">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border Style="{DynamicResource TopBorder}"/>
+            <Label Content="БИБЛИОТЕКА"
+                   Style="{DynamicResource HeadingLabel}"
+                   Margin="20,10,10,10"
+                   HorizontalAlignment="Left"/>
+            <Image x:Name="CloseIm"
+                   HorizontalAlignment="Right"
+                   Width="20" Height="20"
+                   Margin="0,0,20,0"
+                   MouseLeftButtonDown="CloseIm_MouseLeftButtonDown"
+                   Source="/BiblioBalobanovOros;component/ResourceFolder/ImageFolder/Close.png"/>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Content="Авторизация"
+                       Style="{DynamicResource HeadingLabel}"/>
+                <TextBox x:Name="LoginTB" Grid.Row="1"
+                        materialDesign:HintAssist.Hint="Логин"/>
+                <PasswordBox x:Name="PasswordPsb" Grid.Row="2"
+                             materialDesign:HintAssist.Hint="Пароль"/>
+                <Button x:Name="LogInBtn" Grid.Row="3"
+                        Content="Вход"
+                        materialDesign:ButtonAssist.CornerRadius="7"
+                        Width="300"/>
+                <TextBlock x:Name="RegistrationTB"
+                           Grid.Row="4"
+                           FontSize="18"
+                           FontFamily="Pequena Pro"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Text="Регистрация"/>
+                
+            </Grid>
+        </Grid>
+    </Border>
+</Window>
