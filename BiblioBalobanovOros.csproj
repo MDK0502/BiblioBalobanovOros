@@ -68,7 +68,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ClassFolder\DGClass.cs" />
     <Compile Include="ClassFolder\MBClass.cs" />
+    <Compile Include="PageFolder\LibrarianFolder\AddBookPage.xaml.cs">
+      <DependentUpon>AddBookPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageFolder\LibrarianFolder\ListBookPage.xaml.cs">
+      <DependentUpon>ListBookPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowFolder\AuthorizationWindow.xaml.cs">
       <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
     </Compile>
@@ -107,6 +114,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="PageFolder\LibrarianFolder\AddBookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageFolder\LibrarianFolder\ListBookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ResourceFolder\Dictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -126,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="PageFolder\AdministrationFolder\" />
-    <Folder Include="PageFolder\LibrarianFolder\" />
     <Folder Include="PageFolder\ReaderFolder\" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +148,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ResourceFolder\ImageFolder\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceFolder\ImageFolder\Spisok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResourceFolder\ImageFolder\Exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.4.6.1\build\MaterialDesignThemes.targets')" />

@@ -76,6 +76,7 @@ namespace BiblioBalobanovOros.WindowFolder
                         switch (dataReader[2].ToString())
                         {
                             case "1":
+                              
                                 new MainWindow().ShowDialog();
                                 break;
                             case "2":

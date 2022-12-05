@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BiblioBalobanovOros.ClassFolder;
+using BiblioBalobanovOros.PageFolder.LibrarianFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,22 @@ namespace BiblioBalobanovOros.WindowFolder
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new ListBookPage ());
+        }
+
+        private void CloseIm_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            MBClass.ExitMB();
+        }
+
+        private void ListBookBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new ListBookPage());
+        }
+
+        private void AddBookBtn_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new AddBookPage());
         }
     }
 }
